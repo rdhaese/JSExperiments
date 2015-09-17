@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+    <title>Primes</title>
+    <script src="primes.js" type="application/javascript"></script>
 
+</head>
+<body onload="btnClicked()">
+<form>
+    <input type="text" id = "rows"  value="10"/>
+    <input type="text" id = "columns"  value="10"/>
+    <input type="button" value="Print Table" onclick="btnClicked()"/>
+</form>
+
+<div id="tableDiv"></div>
+
+
+
+<script type="application/javascript">
+    function btnClicked() {
+        var rows = document.getElementById('rows').value;
+        var columns = document.getElementById('columns').value;
+        paintTable(rows, columns);
+    }
+</script>
 </body>
 </html>
